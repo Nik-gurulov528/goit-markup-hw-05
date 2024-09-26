@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-markup-hw-04</title>
+    <title>goit-markup-hw-05</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -492,7 +492,85 @@
             </li>
           </ul>
         </div>
+        <div class="small-form">
+          <form>
+            <p class="footer-social-icon">Subscribe</p>
+            <label class="footer-form-email">
+              <input type="email" class="footer-email" placeholder="E-mail" />
+              <button class="submit-email-btn">
+                Subscribe
+                <svg width="24" height="20">
+                  <use href="./images/icons.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </label>
+          </form>
+        </div>
       </div>
     </footer>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <button type="button" class="cancel-btn">
+          <svg width="8" height="8">
+            <use href="./images/icons.svg#icon-cancel"></use>
+          </svg>
+        </button>
+        <p class="form-header">Leave your contacts and we will call you back</p>
+        <form name="user-form" class="window-form">
+          <label class="part-form">
+            Name
+            <input type="text" name="user-name" class="form-input" />
+            <svg class="form-icon" width="12" height="12">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </label>
+          <label class="part-form">
+            Phone
+            <input
+              type="tel"
+              name="user-phone"
+              class="form-input"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              title="xxx-xxx-xx-xx"
+            />
+            <svg class="form-icon" width="13" height="13">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </label>
+          <label class="part-form">
+            Email
+            <input type="email" name="user-email" class="form-input" />
+            <svg class="form-icon" width="15" height="12">
+              <use href="./images/icons.svg#icon-mail"></use>
+            </svg>
+          </label>
+          <label class="part-form">
+            Comment
+            <textarea
+              name="user-comment"
+              class="form-comment"
+              rows="5"
+              placeholder="Text input"
+            ></textarea>
+          </label>
+          <label class="part-form form-label-checkbox">
+            <input
+              type="checkbox"
+              name="user-agreement"
+              class="form-checkbox visually-hidden"
+            />
+            <span class="custom-checkbox">
+              <svg width="10" height="8" class="icon-agreement">
+                <use href="./images/icons.svg#icon-agreement"></use>
+              </svg>
+            </span>
+            I accept the terms and conditions of the
+            <a href="" class="form-link">Privacy Policy</a>
+          </label>
+          <button class="form-submit" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
