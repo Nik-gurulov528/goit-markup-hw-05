@@ -493,83 +493,112 @@
           </ul>
         </div>
         <div class="small-form">
-          <form>
-            <p class="footer-social-icon">Subscribe</p>
-
-            <div class="footer-form-email">
-              <input type="email" class="footer-email" placeholder="E-mail" />
-              <button class="submit-email-btn">
-                Subscribe
-                <svg width="24" height="20">
-                  <use href="./images/icons.svg#icon-icon-send"></use>
-                </svg>
-              </button>
-            </div>
-          </form>
+          <div class="footer-form-email">
+            <p class="footer-form-title">Subscribe</p>
+            <form class="footer-form">
+              <label class="only-form-child">
+                <input
+                  type="email"
+                  class="footer-email"
+                  placeholder="E-mail"
+                  name="subscrime-email"
+                />
+                <button class="submit-email-btn" type="submit">
+                  Subscribe
+                  <svg width="24" height="24" class="icon-submit">
+                    <use href="./images/icons.svg#icon-icon-send"></use>
+                  </svg>
+                </button>
+              </label>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
 
-    <div class="modal-overlay">
+    <div class="modal-overlay is-open">
       <div class="modal">
         <button type="button" class="cancel-btn">
-          <svg width="8" height="8">
+          <svg width="8" height="8" class="cancel">
             <use href="./images/icons.svg#icon-cancel"></use>
           </svg>
         </button>
         <p class="form-header">Leave your contacts and we will call you back</p>
-        <form name="user-form" class="window-form">
-          <label class="part-form">
-            Name
-            <input type="text" name="user-name" class="form-input" />
-            <svg class="form-icon" width="12" height="12">
-              <use href="./images/icons.svg#icon-person"></use>
-            </svg>
-          </label>
-          <label class="part-form">
-            Phone
-            <input
-              type="tel"
-              name="user-phone"
-              class="form-input"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-              title="xxx-xxx-xx-xx"
-            />
-            <svg class="form-icon" width="13" height="13">
-              <use href="./images/icons.svg#icon-phone"></use>
-            </svg>
-          </label>
-          <label class="part-form">
-            Email
-            <input type="email" name="user-email" class="form-input" />
-            <svg class="form-icon" width="15" height="12">
-              <use href="./images/icons.svg#icon-mail"></use>
-            </svg>
-          </label>
-          <label class="part-form">
-            Comment
+        <form name="user-form">
+          <div class="window-form">
+            <label class="part-form" for="user-name"> Name </label>
+            <div class="input-dec">
+              <input
+                type="text"
+                id="user-name"
+                name="user-name"
+                class="form-input"
+              />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="window-form">
+            <label class="part-form" for="user-phone"> Phone </label>
+            <div class="input-dec">
+              <input
+                type="tel"
+                id="user-phone"
+                name="user-phone"
+                class="form-input"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="xxx-xxx-xx-xx"
+              />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="window-form">
+            <label class="part-form" for="user-email"> Email </label>
+            <div class="input-dec">
+              <input
+                type="email"
+                id="user-email"
+                name="user-email"
+                class="form-input"
+              />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="window-form-com">
+            <label class="part-form" for="user-comment"> Comment </label>
             <textarea
+              id="user-comment"
               name="user-comment"
               class="form-comment"
-              rows="5"
               placeholder="Text input"
             ></textarea>
-          </label>
-          <label class="part-form form-label-checkbox">
+          </div>
+          <div class="window-form-check">
             <input
+              id="user-privacy"
               type="checkbox"
-              name="user-agreement"
+              name="user-privacy"
               class="form-checkbox visually-hidden"
+              value="true"
             />
-            <span class="custom-checkbox">
-              <svg width="10" height="8" class="icon-agreement">
-                <use href="./images/icons.svg#icon-agreement"></use>
-              </svg>
-            </span>
-            I accept the terms and conditions of the
-            <a href="" class="form-link">Privacy Policy</a>
-          </label>
-          <button class="form-submit" type="submit">Send</button>
+            <label for="user-privacy" class="part-form form-part-checkbox">
+              <span class="custom-checkbox">
+                <svg width="10" height="8" class="icon-agreement">
+                  <use href="./images/icons.svg#icon-agreement"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="" class="form-link">Privacy Policy</a>
+            </label>
+          </div>
+          <div class="form-btn-send">
+            <button class="form-submit" type="submit">Send</button>
+          </div>
         </form>
       </div>
     </div>
