@@ -688,6 +688,10 @@ img {
   color: #4d5ae5;
 }
 
+.display-for-checkbox {
+  display: inline-flex;
+}
+
 .custom-checkbox {
   display: inline-flex;
   justify-content: center;
