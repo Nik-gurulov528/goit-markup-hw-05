@@ -649,11 +649,6 @@ img {
   position: relative;
 }
 
-.form-part-checkbox {
-  display: flex;
-  gap: 8px;
-}
-
 .form-icon {
   fill: #2e2f42;
   position: absolute;
